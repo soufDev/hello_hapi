@@ -1,9 +1,9 @@
 'use strict';
-const Hapi   = require('hapi');
+const Hapi = require('hapi');
 const Server = new Hapi.Server();
-const Hello  = require('./lib/hello');
+const Hello = require('./lib/hello');
 
-Server.connection({ port: 3000 });
+Server.connection({port: 3000});
 
 Server.route({
     method: 'GET',
@@ -25,6 +25,7 @@ if (!module.parent) {
             throw err;
         }
         console.log(`Server running at: ${Server.info.uri}`);
+        console.log(`HELLO GUYS`);
     });
 }
 
